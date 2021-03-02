@@ -2,7 +2,6 @@ package com.company;
 
 import java.io.*;
 import java.util.ArrayList;
-import java.util.Collections;
 
 public class Main {
 
@@ -48,7 +47,6 @@ public class Main {
 
                 if (zvirata.get(i)[1].equals("TYPE")){
                     zvirata.get(i)[1] = "TYP_ZVÍŘETE";
-                    Collections.swap(zvirata, 1, 2);
                 }
                 if (zvirata.get(i)[2].equals("NAME")){
                     zvirata.get(i)[2] = "JMÉNO_ZVÍŘETE";
@@ -62,9 +60,9 @@ public class Main {
             BufferedWriter bw = new BufferedWriter(new FileWriter("ukol1/ukol1.txt"));
 
             for (int i = 0; i < zvirata.size(); i++) {
-                bw.write(zvirata.get(i)[1]);
-                bw.write(";");
                 bw.write(zvirata.get(i)[2]);
+                bw.write(";");
+                bw.write(zvirata.get(i)[1]);
                 bw.write(";");
                 bw.write(zvirata.get(i)[4]);
                 bw.newLine();
